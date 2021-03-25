@@ -107,23 +107,19 @@
       const el_aviso = document.querySelector("span");
       el_aviso.innerText = "Você já aceitou os cookies =D";
 
-      const el_lgpd_btn2 = document.querySelector("lgpd > button");
       const el_btn = document.querySelector("main > button");
       el_btn.style.display = "block";
-
+      
       el_btn.addEventListener("click", function (e) {
         e.preventDefault();
         document.cookie =
-          "lgpd_cookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        "lgpd_cookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         location.reload();
       });
-
-      
-      el_lgpd_btn2.addEventListener("click", function (e) {
-        e.preventDefault();
-        location.reload();
-      });
-
     }
+    const el_lgpd_btn2 = document.querySelector("lgpd > button");
+      el_lgpd_btn2.addEventListener("click", function (e) {
+        location.reload();
+      });
   </script>
 </html>
