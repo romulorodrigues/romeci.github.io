@@ -36,17 +36,17 @@
         margin: 5% auto 0 auto;
         box-shadow: 0 0 10px #aaa;
       }
-      main > h2{
+      main > h2 {
         text-align: center;
         font-size: 22px;
       }
-      main > p{
+      main > p {
         text-align: center;
         font-size: 18px;
         margin-top: 0;
         margin-bottom: 0;
       }
-      main > p:nth-of-type(2){
+      main > p:nth-of-type(2) {
         text-align: center;
         font-size: 15px;
         font-weight: 600;
@@ -54,20 +54,51 @@
         margin-bottom: 5px;
         opacity: 0.3;
       }
-      main > p:nth-of-type(3){
+      main > p:nth-of-type(3) {
         text-align: center;
         font-size: 15px;
         font-weight: 500;
+      }
+      main > span{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 30px;
+        opacity: 0.2;
       }
     </style>
   </head>
   <body>
     <main>
-      <h2>Script simples para confirmação de utilização dos cookies conforme a LGPD.</h2>
-      <p>Tudo esta sendo gerado pelo js, inclusive o css, então para personalizar o script basta editar este arquivo.</p>
-      <p>Abaixo segue um exemplo do funcionamento, surgindo o banner após 2 segundos do carregamento da página.</p>
-      <p>Para acessar o repositório <a href="https://github.com/romeci/romeci.github.io/blob/main/lgpd/lgpd.js">clique aqui</a></p>
+      <h2>
+        Script simples para confirmação de utilização dos cookies conforme a
+        LGPD.
+      </h2>
+      <p>
+        Tudo esta sendo gerado pelo js, inclusive o css, então para personalizar
+        o script basta editar este arquivo.
+      </p>
+      <p>
+        Abaixo segue um exemplo do funcionamento, surgindo o banner após 2
+        segundos do carregamento da página.
+      </p>
+      <p>
+        Para acessar o repositório
+        <a
+          href="https://github.com/romeci/romeci.github.io/blob/main/lgpd/lgpd.js"
+          >clique aqui</a>
+      </p>
+      <span></span>
     </main>
   </body>
   <script src="lgpd.js"></script>
+  <script>
+     if (getCookie('lgpd_cookie') != null) {
+          window.onload = function () {
+          const el_aviso = document.querySelector("span");
+          el_aviso.innerText = "Você já aceitou os cookies =D"; 
+          }
+        }
+
+  </script>
 </html>
