@@ -28,6 +28,8 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        left: 10px;
+        right: 10px;
         height: auto;
         max-width: 1100px;
         background-color: #fff;
@@ -59,7 +61,7 @@
         font-size: 15px;
         font-weight: 500;
       }
-      main > span{
+      main > span {
         text-align: center;
         font-size: 30px;
         font-weight: 600;
@@ -84,21 +86,18 @@
       </p>
       <p>
         Para acessar o repositório
-        <a
-          href="https://github.com/romeci/romeci.github.io/blob/main/lgpd/lgpd.js"
-          >clique aqui</a>
+        <a href="https://github.com/romeci/romeci.github.io/blob/main/lgpd/lgpd.js">clique aqui</a>
       </p>
       <span></span>
     </main>
   </body>
   <script src="lgpd.js"></script>
   <script>
-     if (getCookie('lgpd_cookie') != null) {
-          window.onload = function () {
-          const el_aviso = document.querySelector("span");
-          el_aviso.innerText = "Você já aceitou os cookies =D"; 
-          }
-        }
-
+    if (getCookie("lgpd_cookie") != null) {
+      window.onload = function () {
+        const el_aviso = document.querySelector("span");
+        el_aviso.innerText = "Você já aceitou os cookies =D";
+      };
+    }
   </script>
 </html>
