@@ -68,6 +68,15 @@
         margin-top: 30px;
         opacity: 0.2;
       }
+      main > button {
+        width: 150px;
+        background-color: #201c1c;
+        color: #fff;
+        padding: 10px 5px;
+        border-radius: 8px;
+        margin: 10px auto 0 auto;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -85,17 +94,27 @@
         segundos do carregamento da página.
       </p>
       <p>
-        Para acessar o repositório
-        <a href="https://github.com/romeci/romeci.github.io/blob/main/lgpd/lgpd.js">clique aqui</a>
+        Para acessar o repositório <a href="https://github.com/romeci/romeci.github.io/blob/main/lgpd/lgpd.js">clique aqui</a>
       </p>
       <span></span>
+      <button>Limpar este Cookie</button>
     </main>
   </body>
   <script src="lgpd.js"></script>
   <script>
     if (getCookie("lgpd_cookie") != null) {
-        const el_aviso = document.querySelector("span");
-        el_aviso.innerText = "Você já aceitou os cookies =D";
-      };
+      const el_aviso = document.querySelector("span");
+      el_aviso.innerText = "Você já aceitou os cookies =D";
+
+      const el_btn = document.querySelector("main > button");
+      el_btn.style.display = "block";
+
+      el_btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.cookie =
+          "lgpd_cookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        location.reload();
+      });
+    }
   </script>
 </html>
