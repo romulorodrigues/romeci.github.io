@@ -94,6 +94,7 @@ const cvalue_lgpd = "confirmado";
 // Informe o texto que irá aparecer no banner
 const texto_lgpd = "<strong>Nome da Empresa:</strong> nós utilizamos cookies para melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <br>";
 
+// Informe o texto que aparece no botão
 const text_btn = "Continuar e fechar"
 
 // link para a política de privacidade
