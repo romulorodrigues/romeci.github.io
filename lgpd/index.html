@@ -93,8 +93,8 @@
   </body>
   <script src="lgpd.js"></script>
   <script>
+    window.onload = function () {
     if (getCookie("lgpd_cookie") != null) {
-      window.onload = function () {
         const el_aviso = document.querySelector("span");
         el_aviso.innerText = "Você já aceitou os cookies =D";
       };
