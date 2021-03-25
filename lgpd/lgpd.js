@@ -44,7 +44,7 @@ function openLgpd() {
     document.body.innerHTML +=
       "<lgpd><div><p>" +
       texto_lgpd +
-      "<a href='#!'>Politica de Privacidade</a></p></div><button>Aceitar</button></lgpd>";
+      "<a href='#!'>Politica de Privacidade</a></p></div><button>"+text_btn+"</button></lgpd>";
 
     // Seleciona o elemento lgpd
     const el_lgpd = document.querySelector("lgpd");
@@ -92,7 +92,9 @@ const cname_lgpd = "lgpd_cookie";
 const cvalue_lgpd = "confirmado";
 
 // Informe o texto que irá aparecer no banner
-const texto_lgpd = "<strong>Nome da Empresa:</strong> a gente usa cookies para melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa ";
+const texto_lgpd = "<strong>Nome da Empresa:</strong> nós utilizamos cookies para melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <br>";
+
+const text_btn = "Continuar e fechar"
 
 // link para a política de privacidade
 // A url absoluta do dominio acessado será preenchida automaticamente
